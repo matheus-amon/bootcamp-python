@@ -1,0 +1,7 @@
+[project]
+name = "jornada-de-dados"
+version = "0.1.0"
+description = "Projeto de Estudos do curso Jornada de Dados"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
