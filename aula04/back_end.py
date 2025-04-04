@@ -1,10 +1,10 @@
 def calc_bonus(wage: float, bonus: float) -> float:
     return 1000 + (wage * bonus)
 
-def show_bonus(name: str, total: float) -> float:
+def show_bonus(name: str, total: float) -> None:
     print(f"\nOlá {name}, o seu bônus é de R$ {total:.2f}")
 
-def validate_variables(name: str, wage: float, bonus: float):
+def validate_variables(name: str, wage: float, bonus: float) -> None:
     name = name.strip()
     if not name:
         raise ValueError("O nome não pode ser vazio.")
@@ -25,13 +25,13 @@ def validate_variables(name: str, wage: float, bonus: float):
     if not (0 <= bonus <= 1):
         raise ValueError("A porcentagem do bônus deve estar entre 0 e 1.")
 
-def show_success(name, wage, bonus):
+def show_success(name: str, wage: float, bonus: float) -> None:
     print("\nDados validados com sucesso!")
     print(f"Nome: {name}")
     print(f"Salário: R$ {wage:.2f}")
     print(f"Bônus: {bonus * 100:.2f}%")
 
-def get_valid_name(prompt):
+def get_valid_name(prompt: str) -> str:
     while True:
         name = input(prompt).strip()
         if not all(x.isalpha() or x.isspace() for x in name):
@@ -41,7 +41,7 @@ def get_valid_name(prompt):
         else:
             return name
 
-def get_valid_type(prompt, type_func, valid_range=None):
+def get_valid_type(prompt: str, type_func, valid_range=None) -> None:
     while True:
         try:
             value = type_func(input(prompt).strip())
