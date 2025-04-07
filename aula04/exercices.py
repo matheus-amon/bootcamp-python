@@ -6,6 +6,7 @@ for i in range(1, 11):
 langs: list = ["Python", "Java", "C++", "JavaScript"]
 langs.remove("C++")
 langs.append("Ruby")
+print(langs)
 
 # 3. Crie um dicionário para armazenar informações de um livro, incluindo título, autor e ano de publicação. Imprima cada informação.
 livro: dict = {
@@ -40,29 +41,94 @@ print(sum(prices))
 
 # 6. Eliminação de Duplicatas
 # Objetivo: Dada uma lista de emails, remover todos os duplicados.
+emails = [
+    'matheus.amon@outlook.com', 'mathesamon@gmail.com', 'amoncpbi@gmail.com',
+    'matheus.amon@singlesoftware.com', 'mathesamon@gmail.com', 'amoncpbi@gmail.com'
+]
+
+def remove_emails_duplicates(emails: list) -> list:
+    return list(set(emails))
+
+print(remove_emails_duplicates(emails=emails))
 
 # 7. Filtragem de Dados
 # Objetivo: Dada uma lista de idades, filtrar apenas aquelas que são maiores ou iguais a 18.
+ages: list = [
+    12, 13, 12, 56, 43, 57, 34, 23, 12, 65, 97, 12, 75, 42, 46, 35, 23, 17, 16,
+    13, 14, 15, 16, 2, 5, 9, 2, 6, 8, 0, 10, 35, 86, 35, 23, 54, 76, 45, 15, 14
+]
+
+def filter_ages(ages: list) -> list:
+    return [age for age in ages if age >= 18]
+
+filtered_ages: list = filter_ages(ages=ages)
+print(filtered_ages)
 
 # 8. Ordenação Personalizada
 # Objetivo: Dada uma lista de dicionários representando pessoas, ordená-las pelo nome.
+'''Essa eu peguei do gabarito pois não consegui elaborar a lógica do exercício'''
+persons = [
+    {"nome": "Alice", "idade": 30},
+    {"nome": "Bob", "idade": 25},
+    {"nome": "Carol", "idade": 20}
+]
+persons.sort(key=lambda pessoa: pessoa["nome"])
+
+print(persons)
 
 # 9. Agregação de Dados
 # Objetivo: Dado um conjunto de números, calcular a média.
+numbers = [10, 20, 30, 40, 50]
+
+def calc_avg_list(numbers: list) -> float:
+    total = sum(numbers)
+    size = len(numbers)
+    avg = total / size
+    return avg
+
+print(calc_avg_list(numbers=numbers))
 
 # 10. Divisão de Dados em Grupos
 # Objetivo: Dada uma lista de valores, dividir em duas listas: uma para valores pares e outra para ímpares.
+values: list = [
+    12, 13, 12, 56, 43, 57, 34, 23, 12, 65, 97, 12, 75, 42, 46, 35, 23, 17, 16,
+    13, 14, 15, 16, 2, 5, 9, 2, 6, 8, 0, 10, 35, 86, 35, 23, 54, 76, 45, 15, 14
+]
 
-# Exercícios com Dicionários
+evens: list = [even for even in values if not even % 2]
+odds: list = [odd for odd in values if odd % 2]
+
+print(odds, evens)
 
 # 11. Atualização de Dados
 # Objetivo: Dada uma lista de dicionários representando produtos, atualizar o preço de um produto específico.
+products: list = [
+    {"id": 1, "nome": "Teclado", "preço": 100},
+    {"id": 2, "nome": "Mouse", "preço": 80},
+    {"id": 3, "nome": "Monitor", "preço": 300}
+]
+
+for product in products:
+    if product['id'] == 2:
+        product['preço'] = 90
+
+print(products)
 
 # 12. Fusão de Dicionários
 # Objetivo: Dados dois dicionários, fundi-los em um único dicionário.
+dict1 = {"a": 1, "b": 2}
+dict2 = {"c": 3, "d": 4}
+
+dict3 = {**dict1, **dict2}
+
+print(dict3)
 
 # 13. Filtragem de Dados em Dicionário
 # Objetivo: Dado um dicionário de estoque de produtos, filtrar aqueles com quantidade maior que 0.
+stock = {"Teclado": 10, "Mouse": 0, "Monitor": 3, "CPU": 0}
+stock = {product: qt for product, qt in stock.items() if qt > 0}
+
+print(stock)
 
 # 14. Extração de Chaves e Valores
 # Objetivo: Dado um dicionário, criar listas separadas para suas chaves e valores.
