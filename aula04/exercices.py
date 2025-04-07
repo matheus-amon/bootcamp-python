@@ -132,22 +132,58 @@ print(stock)
 
 # 14. Extração de Chaves e Valores
 # Objetivo: Dado um dicionário, criar listas separadas para suas chaves e valores.
+example: dict = {"a": 1, "b": 2, "c": 3}
+keys: list = list(example.keys())
+values: list = list(example.values())
+
+print(keys, values)
 
 # 15. Contagem de Frequência de Itens
 # Objetivo: Dada uma string, contar a frequência de cada caractere usando um dicionário.
+text: str = 'matheus amon cunha figueiredo marçal'
+frequency: dict = {}
+for i in text:
+    if i in frequency:
+        frequency[i] += 1
+    else:
+        frequency[i] = 1
+
+print(frequency)
 
 # 16. Soma de Números
 # Escreva uma função que receba uma lista de números e retorne a soma de todos os números.
+def list_sum(numbers: list):
+    return numbers.sum()
 
 # 17. Verificação de Número Primo
 # Crie uma função que receba um número como argumento e retorne True se o número for primo e False caso contrário.
+def is_cousin(number: int) -> bool:
+    if number < 2:
+        return False
+
+    for i in range(2, int(number ** 0.5) + 1):
+        if number % i == 0:
+            return False
+
+    return True
 
 # 18. Reversão de String
 # Desenvolva uma função que receba uma string como argumento e retorne essa string revertida.
+def reverse_string(string: str) -> str:
+    return string[::-1]
 
 # 19. Combinação de Pares com Soma
 # Implemente uma função que receba dois argumentos: uma lista de números e um número. 
 # A função deve retornar todas as combinações de pares na lista que somem ao número dado.
+def find_pairs(numbers: list, target: int) -> list:
+    pairs: list = []
+    for i in range(len(numbers)):
+        for j in range(i + 1, len(numbers)):
+            if numbers[i] + numbers[j] == target:
+                pairs.append((numbers[i], numbers[j]))
+    return pairs
 
 # 20. Ordenação de Chaves de Dicionário
 # Escreva uma função que receba um dicionário e retorne uma lista de chaves ordenadas.
+def sort_dict_keys(d: dict) -> list:
+    return sorted(d.keys())
