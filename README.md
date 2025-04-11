@@ -37,6 +37,9 @@ Este repositório foi criado para acompanhar os estudos do curso [Jornada de Dad
     - Validação e cálculo de bônus com tratamento de erros.
     - Exercícios variados, como eliminação de duplicatas, filtragem de dados, ordenação personalizada, e contagem de frequência de itens.
 
+- **Aula 05**: One Billion Row Challenge.
+  - Desafio feito em outro repositório
+
 ---
 
 ## Tecnologias Utilizadas
@@ -61,3 +64,4 @@ Este repositório foi criado para acompanhar os estudos do curso [Jornada de Dad
 2. Clone este repositório:
    ```bash
    git clone https://github.com/seu-usuario/jornada-de-dados.git
+   ```
