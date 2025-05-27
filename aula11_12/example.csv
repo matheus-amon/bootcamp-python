@@ -1,0 +1,17 @@
+id,invoice_id,name,unit_price,quantity,discount,category
+1,1001,Widget A,10.00,2,0.05,Category 1
+2,1001,Widget B,15.00,1,0.10,Category 2
+3,1002,Widget C,20.00,3,0.00,
+4,1002,Widget D,25.00,1,0.15,Category 3
+5,1003,Widget E,30.00,4,0.20,Category 1
+6,1003,Widget F,35.00,2,0.05,Category 2
+7,1004,Widget G,40.00,1,0.00,
+8,1004,Widget H,45.00,3,0.10,Category 3
+9,1005,Widget I,50.00,2,0.05,Category 3
+10,1005,Widget J,55.00,1,0.15,Category 1
+11,1005,Widget K,,5,0.20,
+12,1006,Widget L,60.00,,0.10,
+13,1006,Widget M,65.00,2,,
+14,1007,,70.00,1,0.00,Category 2
+15,1007,Widget O,75.00,3,0.05,Category 1
+16,1008,Widget P,80.00,2,0.10,
