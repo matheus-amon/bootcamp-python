@@ -20,12 +20,16 @@ class CSVProcessor:
             print(self.df)
             separate_outputs()
 
-    def filter_blank_rows(self, column, is_filtered_df = False):
+    def filter_notna_rows(self, column, is_filtered_df=False):
         df = self.filtered_df if is_filtered_df else self.df
         try:
-            df[df[column] == None]
-        except:
-            ValueError("Não foi possível filtrar, verifique os argumentos")
+            filtered = df[df[column].notna()]
+            if is_filtered_df:
+                self.filtered_df = filtered
+            else:
+                self.df = filtered
+        except Exception as e:
+            raise ValueError(f"Não foi possível filtrar, verifique os argumentos: {e}")
 
 def separate_outputs():
     print(' ')

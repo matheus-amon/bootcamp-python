@@ -14,4 +14,5 @@ csv2.show_df(is_filtered_df=True)
 file_path3 = "./aula11_12/example.csv"
 csv3 = CSVProcessor(file_path=file_path3)
 csv3.read_file_csv()
-
+csv3.filter_notna_rows('category')
+csv3.show_df()
